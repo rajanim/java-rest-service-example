@@ -15,7 +15,7 @@ import com.sun.jersey.api.client.ClientHandlerException;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
-@Path("couchcache")
+@Path("sampleManager")
 public class SampleManager implements ISampleManager {
 
 	/**
