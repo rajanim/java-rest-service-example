@@ -37,7 +37,7 @@ public class SampleManager implements ISampleManager {
 		Object request = "";
 		Object response = "";
 		try {
-			response = invokeRestServiceCall(request,
+			response = restServiceCall(request,
 					ApplicationConstants.CHANGE_RECORDS_LIST,
 					MediaType.APPLICATION_JSON_TYPE);
 		} catch (Exception exception) {
@@ -60,7 +60,7 @@ public class SampleManager implements ISampleManager {
 	 * @return response
 	 * @throws Exception
 	 */
-	private String invokeRestServiceCall(Object request, String serviceURL,
+	private String restServiceCall(Object request, String serviceURL,
 			MediaType mediaType) throws Exception {
 		Object response = null;
 		try {
@@ -90,7 +90,7 @@ public class SampleManager implements ISampleManager {
 				logger.error("Missing Server Url");
 			}
 		} catch (ClientHandlerException clientHandlerException) {
-			logger.error("Could not connect to IAM:" + clientHandlerException);
+			logger.error("Could not connect to :" + clientHandlerException);
 			throw new Exception(clientHandlerException);
 		}
 		return response.toString();
