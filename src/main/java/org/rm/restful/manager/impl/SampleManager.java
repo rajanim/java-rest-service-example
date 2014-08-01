@@ -45,10 +45,12 @@ public class SampleManager implements ISampleManager {
 		}
 		if (response.equals("success")) {
 			logger.info("success.. ");
+			return response.toString();
 		} else {
 			logger.info("response failure message:" + response.toString());
+				return null;
 		}
-		return "success";
+	
 	}
 
 	/**
